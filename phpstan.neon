@@ -1,2 +1,5 @@
 parameters:
+    ignoreErrors:
+        -
+            identifier: phpDoc.parseError
     level: 8

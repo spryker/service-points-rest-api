@@ -10,7 +10,7 @@ namespace Spryker\Glue\ServicePointsRestApi\Processor\Expander;
 interface ServicePointAddressRelationshipExpanderInterface
 {
     /**
-     * @param list<\Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface> $restResources
+     * @param array<\Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface> $restResources
      *
      * @return void
      */
