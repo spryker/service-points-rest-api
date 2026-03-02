@@ -24,10 +24,6 @@ class ServicePointAddressReader implements ServicePointAddressReaderInterface
      */
     protected ServicePointAddressResponseBuilderInterface $servicePointAddressResponseBuilder;
 
-    /**
-     * @param \Spryker\Glue\ServicePointsRestApi\Processor\Reader\ServicePointStorageReaderInterface $servicePointStorageReader
-     * @param \Spryker\Glue\ServicePointsRestApi\Processor\Builder\ServicePointAddressResponseBuilderInterface $servicePointAddressResponseBuilder
-     */
     public function __construct(
         ServicePointStorageReaderInterface $servicePointStorageReader,
         ServicePointAddressResponseBuilderInterface $servicePointAddressResponseBuilder
@@ -52,11 +48,6 @@ class ServicePointAddressReader implements ServicePointAddressReaderInterface
             ->createServicePointAddressRestResourcesIndexedByServicePointUuid($servicePointStorageCollectionTransfer);
     }
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function getServicePointAddress(RestRequestInterface $restRequest): RestResponseInterface
     {
         $servicePointsResource = $restRequest->findParentResourceByType(ServicePointsRestApiConfig::RESOURCE_SERVICE_POINTS);

@@ -19,10 +19,5 @@ interface ServicePointStorageReaderInterface
      */
     public function getServicePointStorageCollection(array $servicePointUuids): ServicePointStorageCollectionTransfer;
 
-    /**
-     * @param string $servicePointUuid
-     *
-     * @return \Generated\Shared\Transfer\ServicePointStorageTransfer|null
-     */
     public function findServicePointStorage(string $servicePointUuid): ?ServicePointStorageTransfer;
 }

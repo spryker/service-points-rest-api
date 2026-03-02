@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\RestCheckoutDataTransfer;
 
 interface CheckoutDataResponseAttributesExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\RestCheckoutDataTransfer $restCheckoutDataTransfer
-     * @param \Generated\Shared\Transfer\RestCheckoutDataResponseAttributesTransfer $restCheckoutResponseAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestCheckoutDataResponseAttributesTransfer
-     */
     public function expandCheckoutDataResponseAttributesWithSelectedServicePoints(
         RestCheckoutDataTransfer $restCheckoutDataTransfer,
         RestCheckoutDataResponseAttributesTransfer $restCheckoutResponseAttributesTransfer

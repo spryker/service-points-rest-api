@@ -27,22 +27,12 @@ class ServicePointsRestApiToServicePointStorageClientBridge implements ServicePo
         $this->servicePointStorageClient = $servicePointStorageClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageCriteriaTransfer $servicePointStorageCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointStorageCollectionTransfer
-     */
     public function getServicePointStorageCollection(
         ServicePointStorageCriteriaTransfer $servicePointStorageCriteriaTransfer
     ): ServicePointStorageCollectionTransfer {
         return $this->servicePointStorageClient->getServicePointStorageCollection($servicePointStorageCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageCriteriaTransfer $serviceTypeStorageCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeStorageCollectionTransfer
-     */
     public function getServiceTypeStorageCollection(
         ServiceTypeStorageCriteriaTransfer $serviceTypeStorageCriteriaTransfer
     ): ServiceTypeStorageCollectionTransfer {

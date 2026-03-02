@@ -71,10 +71,6 @@ class ServicePointSearchRequestBuilder implements ServicePointSearchRequestBuild
      */
     protected ServicePointsRestApiToStoreClientInterface $storeClient;
 
-    /**
-     * @param \Spryker\Glue\ServicePointsRestApi\ServicePointsRestApiConfig $servicePointsRestApiConfig
-     * @param \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToStoreClientInterface $storeClient
-     */
     public function __construct(
         ServicePointsRestApiConfig $servicePointsRestApiConfig,
         ServicePointsRestApiToStoreClientInterface $storeClient
@@ -83,11 +79,6 @@ class ServicePointSearchRequestBuilder implements ServicePointSearchRequestBuild
         $this->storeClient = $storeClient;
     }
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     *
-     * @return \Generated\Shared\Transfer\ServicePointSearchRequestTransfer
-     */
     public function createServicePointSearchRequestTransfer(RestRequestInterface $restRequest): ServicePointSearchRequestTransfer
     {
         $requestParameters = [static::PARAMETER_EXCLUDE_ADDRESS_RELATION => true];

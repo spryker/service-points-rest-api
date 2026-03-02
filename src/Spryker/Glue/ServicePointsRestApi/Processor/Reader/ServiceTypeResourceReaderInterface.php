@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ServiceTypeResourceCriteriaTransfer;
 
 interface ServiceTypeResourceReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeResourceCriteriaTransfer $serviceTypeResourceCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeResourceCollectionTransfer
-     */
     public function getServiceTypeResourceCollection(
         ServiceTypeResourceCriteriaTransfer $serviceTypeResourceCriteriaTransfer
     ): ServiceTypeResourceCollectionTransfer;

@@ -48,9 +48,6 @@ use Spryker\Glue\ServicePointsRestApi\Processor\Validator\ServicePointCheckoutRe
  */
 class ServicePointsRestApiFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Reader\ServicePointReaderInterface
-     */
     public function createServicePointReader(): ServicePointReaderInterface
     {
         return new ServicePointReader(
@@ -61,9 +58,6 @@ class ServicePointsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Reader\ServicePointAddressReaderInterface
-     */
     public function createServicePointAddressReader(): ServicePointAddressReaderInterface
     {
         return new ServicePointAddressReader(
@@ -72,9 +66,6 @@ class ServicePointsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Reader\ServicePointStorageReaderInterface
-     */
     public function createServicePointStorageReader(): ServicePointStorageReaderInterface
     {
         return new ServicePointStorageReader(
@@ -83,9 +74,6 @@ class ServicePointsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Reader\ServiceTypeResourceReaderInterface
-     */
     public function createServiceTypeResourceReader(): ServiceTypeResourceReaderInterface
     {
         return new ServiceTypeResourceReader(
@@ -94,9 +82,6 @@ class ServicePointsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Expander\ServicePointByCheckoutDataResourceRelationshipExpanderInterface
-     */
     public function createServicePointByCheckoutDataResourceRelationshipExpander(): ServicePointByCheckoutDataResourceRelationshipExpanderInterface
     {
         return new ServicePointByCheckoutDataResourceRelationshipExpander(
@@ -105,9 +90,6 @@ class ServicePointsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Expander\ServicePointAddressRelationshipExpanderInterface
-     */
     public function createServicePointAddressRelationshipExpander(): ServicePointAddressRelationshipExpanderInterface
     {
         return new ServicePointAddressRelationshipExpander(
@@ -115,9 +97,6 @@ class ServicePointsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Builder\ServicePointSearchRequestBuilderInterface
-     */
     public function createServicePointRequestBuilder(): ServicePointSearchRequestBuilderInterface
     {
         return new ServicePointSearchRequestBuilder(
@@ -126,9 +105,6 @@ class ServicePointsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Builder\ServicePointResponseBuilderInterface
-     */
     public function createServicePointResponseBuilder(): ServicePointResponseBuilderInterface
     {
         return new ServicePointResponseBuilder(
@@ -138,9 +114,6 @@ class ServicePointsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Builder\ServicePointAddressResponseBuilderInterface
-     */
     public function createServicePointAddressResponseBuilder(): ServicePointAddressResponseBuilderInterface
     {
         return new ServicePointAddressResponseBuilder(
@@ -150,9 +123,6 @@ class ServicePointsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Builder\ErrorResponseBuilderInterface
-     */
     public function createErrorResponseBuilder(): ErrorResponseBuilderInterface
     {
         return new ErrorResponseBuilder(
@@ -162,41 +132,26 @@ class ServicePointsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Mapper\ServicePointMapperInterface
-     */
     public function createServicePointMapper(): ServicePointMapperInterface
     {
         return new ServicePointMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Mapper\ServicePointAddressMapperInterface
-     */
     public function createServicePointAddressMapper(): ServicePointAddressMapperInterface
     {
         return new ServicePointAddressMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Mapper\ServiceTypeMapperInterface
-     */
     public function createServiceTypeMapper(): ServiceTypeMapperInterface
     {
         return new ServiceTypeMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Expander\CheckoutDataResponseAttributesExpanderInterface
-     */
     public function createCheckoutDataResponseAttributesExpander(): CheckoutDataResponseAttributesExpanderInterface
     {
         return new CheckoutDataResponseAttributesExpander();
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Processor\Validator\ServicePointCheckoutRequestAttributesValidatorInterface
-     */
     public function createServicePointCheckoutRequestAttributesValidator(): ServicePointCheckoutRequestAttributesValidatorInterface
     {
         return new ServicePointCheckoutRequestAttributesValidator(
@@ -205,33 +160,21 @@ class ServicePointsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToServicePointStorageClientInterface
-     */
     public function getServicePointStorageClient(): ServicePointsRestApiToServicePointStorageClientInterface
     {
         return $this->getProvidedDependency(ServicePointsRestApiDependencyProvider::CLIENT_SERVICE_POINT_STORAGE);
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToServicePointSearchClientInterface
-     */
     public function getServicePointSearchClient(): ServicePointsRestApiToServicePointSearchClientInterface
     {
         return $this->getProvidedDependency(ServicePointsRestApiDependencyProvider::CLIENT_SERVICE_POINT_SEARCH);
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToStoreClientInterface
-     */
     public function getStoreClient(): ServicePointsRestApiToStoreClientInterface
     {
         return $this->getProvidedDependency(ServicePointsRestApiDependencyProvider::CLIENT_STORE);
     }
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToGlossaryStorageClientInterface
-     */
     public function getGlossaryStorageClient(): ServicePointsRestApiToGlossaryStorageClientInterface
     {
         return $this->getProvidedDependency(ServicePointsRestApiDependencyProvider::CLIENT_GLOSSARY_STORAGE);

@@ -57,9 +57,6 @@ class ServicePointsRestApiResourceTest extends Unit
      */
     protected ServicePointsRestApiResourceTester $tester;
 
-    /**
-     * @return void
-     */
     protected function _before(): void
     {
         parent::_before();
@@ -70,9 +67,6 @@ class ServicePointsRestApiResourceTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetServiceTypeResourceCollectionReturnsCollectionOfGlueResourcesWithCorrectAttributes(): void
     {
         // Arrange
@@ -107,9 +101,6 @@ class ServicePointsRestApiResourceTest extends Unit
         $this->assertSame($serviceTypeStorageTransfer->getKeyOrFail(), $serviceTypeResourceTransfer->getAttributes()->getKey());
     }
 
-    /**
-     * @return void
-     */
     public function testGetServiceTypeResourceCollectionReturnsEmptyCollectionWhenNoStorageDataFound(): void
     {
         // Arrange
@@ -186,12 +177,6 @@ class ServicePointsRestApiResourceTest extends Unit
         return $serviceTypeStorageCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeResourceCollectionTransfer $serviceTypeResourceCollectionTransfer
-     * @param string $uuid
-     *
-     * @return \Generated\Shared\Transfer\GlueResourceTransfer|null
-     */
     protected function findServiceTypeResourceByUuid(
         ServiceTypeResourceCollectionTransfer $serviceTypeResourceCollectionTransfer,
         string $uuid
@@ -205,9 +190,6 @@ class ServicePointsRestApiResourceTest extends Unit
         return null;
     }
 
-    /**
-     * @return void
-     */
     protected function assertGetServiceTypeStorageCollectionEmptyConditions(): void
     {
         $servicePointStorageClientMock = Stub::makeEmpty(ServicePointsRestApiToServicePointStorageClientInterface::class, [

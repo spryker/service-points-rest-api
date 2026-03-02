@@ -13,28 +13,13 @@ use Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface;
 
 interface ServicePointResponseBuilderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageTransfer $servicePointStorageTransfer
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createServicePointRestResponse(
         ServicePointStorageTransfer $servicePointStorageTransfer
     ): RestResponseInterface;
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointSearchCollectionTransfer $servicePointSearchCollectionTransfer
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createServicePointCollectionRestResponse(
         ServicePointSearchCollectionTransfer $servicePointSearchCollectionTransfer
     ): RestResponseInterface;
 
-    /**
-     * @param string $localeName
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createServicePointNotFoundErrorResponse(string $localeName): RestResponseInterface;
 }

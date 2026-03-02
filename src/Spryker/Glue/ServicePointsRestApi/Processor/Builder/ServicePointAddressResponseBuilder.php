@@ -34,11 +34,6 @@ class ServicePointAddressResponseBuilder implements ServicePointAddressResponseB
      */
     protected ServicePointAddressMapperInterface $servicePointAddressMapper;
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceBuilderInterface $restResourceBuilder
-     * @param \Spryker\Glue\ServicePointsRestApi\Processor\Builder\ErrorResponseBuilderInterface $errorResponseBuilder
-     * @param \Spryker\Glue\ServicePointsRestApi\Processor\Mapper\ServicePointAddressMapperInterface $servicePointAddressMapper
-     */
     public function __construct(
         RestResourceBuilderInterface $restResourceBuilder,
         ErrorResponseBuilderInterface $errorResponseBuilder,
@@ -49,11 +44,6 @@ class ServicePointAddressResponseBuilder implements ServicePointAddressResponseB
         $this->servicePointAddressMapper = $servicePointAddressMapper;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageTransfer $servicePointStorageTransfer
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createServicePointAddressRestResponse(
         ServicePointStorageTransfer $servicePointStorageTransfer
     ): RestResponseInterface {
@@ -85,11 +75,6 @@ class ServicePointAddressResponseBuilder implements ServicePointAddressResponseB
         return $servicePointAddressRestResources;
     }
 
-    /**
-     * @param string $localeName
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createServicePointAddressNotFoundErrorResponse(string $localeName): RestResponseInterface
     {
         return $this->errorResponseBuilder->createErrorResponse(
@@ -98,11 +83,6 @@ class ServicePointAddressResponseBuilder implements ServicePointAddressResponseB
         );
     }
 
-    /**
-     * @param string $localeName
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createServicePointAddressServicePointIsNotSpecifiedErrorResponse(string $localeName): RestResponseInterface
     {
         return $this->errorResponseBuilder->createErrorResponse(
@@ -111,11 +91,6 @@ class ServicePointAddressResponseBuilder implements ServicePointAddressResponseB
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageTransfer $servicePointStorageTransfer
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface
-     */
     protected function createServicePointAddressRestResource(
         ServicePointStorageTransfer $servicePointStorageTransfer
     ): RestResourceInterface {
@@ -137,11 +112,6 @@ class ServicePointAddressResponseBuilder implements ServicePointAddressResponseB
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageTransfer $servicePointStorageTransfer
-     *
-     * @return string
-     */
     protected function getServicePointAddressResourceSelfLink(
         ServicePointStorageTransfer $servicePointStorageTransfer
     ): string {

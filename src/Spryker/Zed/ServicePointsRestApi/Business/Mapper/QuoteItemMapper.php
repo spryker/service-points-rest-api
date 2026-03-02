@@ -21,20 +21,11 @@ class QuoteItemMapper implements QuoteItemMapperInterface
      */
     protected ServicePointsRestApiToServicePointFacadeInterface $servicePointFacade;
 
-    /**
-     * @param \Spryker\Zed\ServicePointsRestApi\Dependency\Facade\ServicePointsRestApiToServicePointFacadeInterface $servicePointFacade
-     */
     public function __construct(ServicePointsRestApiToServicePointFacadeInterface $servicePointFacade)
     {
         $this->servicePointFacade = $servicePointFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\RestCheckoutRequestAttributesTransfer $restCheckoutRequestAttributesTransfer
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function mapServicePointToQuoteItem(
         RestCheckoutRequestAttributesTransfer $restCheckoutRequestAttributesTransfer,
         QuoteTransfer $quoteTransfer

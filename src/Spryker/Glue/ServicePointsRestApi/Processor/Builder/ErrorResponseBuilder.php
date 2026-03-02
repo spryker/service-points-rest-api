@@ -31,11 +31,6 @@ class ErrorResponseBuilder implements ErrorResponseBuilderInterface
      */
     protected ServicePointsRestApiToGlossaryStorageClientInterface $glossaryStorageClient;
 
-    /**
-     * @param \Spryker\Glue\ServicePointsRestApi\ServicePointsRestApiConfig $servicePointsRestApiConfig
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceBuilderInterface $restResourceBuilder
-     * @param \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToGlossaryStorageClientInterface $glossaryStorageClient
-     */
     public function __construct(
         ServicePointsRestApiConfig $servicePointsRestApiConfig,
         RestResourceBuilderInterface $restResourceBuilder,
@@ -46,12 +41,6 @@ class ErrorResponseBuilder implements ErrorResponseBuilderInterface
         $this->glossaryStorageClient = $glossaryStorageClient;
     }
 
-    /**
-     * @param string $errorMessage
-     * @param string $localeName
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createErrorResponse(string $errorMessage, string $localeName): RestResponseInterface
     {
         $errorResponse = $this->restResourceBuilder->createRestResponse();
@@ -70,11 +59,6 @@ class ErrorResponseBuilder implements ErrorResponseBuilderInterface
         return $errorResponse->addError($restErrorMessageTransfer);
     }
 
-    /**
-     * @param string $errorMessage
-     *
-     * @return \Generated\Shared\Transfer\RestErrorMessageTransfer
-     */
     protected function createUnknownRestErrorMessageTransfer(string $errorMessage): RestErrorMessageTransfer
     {
         return (new RestErrorMessageTransfer())

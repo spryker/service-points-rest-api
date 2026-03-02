@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\ServiceTypeStorageCollectionTransfer;
 
 interface ServiceTypeMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageCollectionTransfer $serviceTypeStorageCollectionTransfer
-     * @param \Generated\Shared\Transfer\ServiceTypeResourceCollectionTransfer $serviceTypeResourceCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeResourceCollectionTransfer
-     */
     public function mapServiceTypeStorageCollectionToServiceTypeResourceCollection(
         ServiceTypeStorageCollectionTransfer $serviceTypeStorageCollectionTransfer,
         ServiceTypeResourceCollectionTransfer $serviceTypeResourceCollectionTransfer

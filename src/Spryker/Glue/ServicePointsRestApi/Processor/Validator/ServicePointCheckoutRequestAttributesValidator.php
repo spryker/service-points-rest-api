@@ -31,10 +31,6 @@ class ServicePointCheckoutRequestAttributesValidator implements ServicePointChec
      */
     protected ServicePointsRestApiToStoreClientInterface $storeClient;
 
-    /**
-     * @param \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToServicePointStorageClientInterface $servicePointStorageClient
-     * @param \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToStoreClientInterface $storeClient
-     */
     public function __construct(
         ServicePointsRestApiToServicePointStorageClientInterface $servicePointStorageClient,
         ServicePointsRestApiToStoreClientInterface $storeClient
@@ -43,11 +39,6 @@ class ServicePointCheckoutRequestAttributesValidator implements ServicePointChec
         $this->storeClient = $storeClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\RestCheckoutRequestAttributesTransfer $restCheckoutRequestAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestErrorCollectionTransfer
-     */
     public function validate(
         RestCheckoutRequestAttributesTransfer $restCheckoutRequestAttributesTransfer
     ): RestErrorCollectionTransfer {
@@ -142,13 +133,6 @@ class ServicePointCheckoutRequestAttributesValidator implements ServicePointChec
         return $storageServicePointUuids;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\RestErrorCollectionTransfer $restErrorCollectionTransfer
-     * @param string $responseCode
-     * @param string $responseDetails
-     *
-     * @return \Generated\Shared\Transfer\RestErrorCollectionTransfer
-     */
     protected function addRestErrorMessage(
         RestErrorCollectionTransfer $restErrorCollectionTransfer,
         string $responseCode,

@@ -48,9 +48,6 @@ class ServicePointCheckoutRequestAttributesValidatorPluginTest extends Unit
      */
     protected ServicePointsRestApiTester $tester;
 
-    /**
-     * @return void
-     */
     protected function _before(): void
     {
         parent::_before();
@@ -58,9 +55,6 @@ class ServicePointCheckoutRequestAttributesValidatorPluginTest extends Unit
         $this->tester->mockStoreClient();
     }
 
-    /**
-     * @return void
-     */
     public function testValidateAttributesReturnsNoErrorsWhenNoServicePointsAreProvided(): void
     {
         // Arrange
@@ -74,9 +68,6 @@ class ServicePointCheckoutRequestAttributesValidatorPluginTest extends Unit
         $this->assertCount(0, $restErrorCollectionTransfer->getRestErrors());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateAttributesReturnsNoErrorsWhenProvidedServicePointsAreAvailableForTheCurrentStore(): void
     {
         // Arrange
@@ -96,9 +87,6 @@ class ServicePointCheckoutRequestAttributesValidatorPluginTest extends Unit
         $this->assertCount(0, $restErrorCollectionTransfer->getRestErrors());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateAttributesReturnsBadRequestWhenProvidedServicePointsAreNotAvailableForTheCurrentStore(): void
     {
         // Arrange
@@ -123,9 +111,6 @@ class ServicePointCheckoutRequestAttributesValidatorPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testValidateAttributesReturnsBadRequestWhenItemsProvidedForTwoDifferentServicePointsAreDuplicated(): void
     {
         // Arrange

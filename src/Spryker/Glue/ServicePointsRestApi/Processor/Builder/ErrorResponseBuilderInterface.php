@@ -11,11 +11,5 @@ use Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface;
 
 interface ErrorResponseBuilderInterface
 {
-    /**
-     * @param string $errorMessage
-     * @param string $localeName
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createErrorResponse(string $errorMessage, string $localeName): RestResponseInterface;
 }

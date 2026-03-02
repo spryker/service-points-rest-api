@@ -42,12 +42,6 @@ class ServicePointReader implements ServicePointReaderInterface
      */
     protected ServicePointResponseBuilderInterface $servicePointResponseBuilder;
 
-    /**
-     * @param \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToServicePointSearchClientInterface $servicePointSearchClient
-     * @param \Spryker\Glue\ServicePointsRestApi\Processor\Reader\ServicePointStorageReaderInterface $servicePointStorageReader
-     * @param \Spryker\Glue\ServicePointsRestApi\Processor\Builder\ServicePointSearchRequestBuilderInterface $servicePointSearchRequestBuilder
-     * @param \Spryker\Glue\ServicePointsRestApi\Processor\Builder\ServicePointResponseBuilderInterface $servicePointResponseBuilder
-     */
     public function __construct(
         ServicePointsRestApiToServicePointSearchClientInterface $servicePointSearchClient,
         ServicePointStorageReaderInterface $servicePointStorageReader,
@@ -60,11 +54,6 @@ class ServicePointReader implements ServicePointReaderInterface
         $this->servicePointResponseBuilder = $servicePointResponseBuilder;
     }
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function getServicePoint(RestRequestInterface $restRequest): RestResponseInterface
     {
         /** @var string $servicePointUuid */
@@ -78,11 +67,6 @@ class ServicePointReader implements ServicePointReaderInterface
         return $this->servicePointResponseBuilder->createServicePointRestResponse($servicePointStorageTransfer);
     }
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function getServicePointCollection(RestRequestInterface $restRequest): RestResponseInterface
     {
         $servicePointSearchRequestTransfer = $this->servicePointSearchRequestBuilder->createServicePointSearchRequestTransfer($restRequest);

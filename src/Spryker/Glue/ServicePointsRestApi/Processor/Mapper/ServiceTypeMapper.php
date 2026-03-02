@@ -16,12 +16,6 @@ use Spryker\Glue\ServicePointsRestApi\ServicePointsRestApiConfig;
 
 class ServiceTypeMapper implements ServiceTypeMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageCollectionTransfer $serviceTypeStorageCollectionTransfer
-     * @param \Generated\Shared\Transfer\ServiceTypeResourceCollectionTransfer $serviceTypeResourceCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeResourceCollectionTransfer
-     */
     public function mapServiceTypeStorageCollectionToServiceTypeResourceCollection(
         ServiceTypeStorageCollectionTransfer $serviceTypeStorageCollectionTransfer,
         ServiceTypeResourceCollectionTransfer $serviceTypeResourceCollectionTransfer
@@ -38,12 +32,6 @@ class ServiceTypeMapper implements ServiceTypeMapperInterface
         return $serviceTypeResourceCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageTransfer $serviceTypeStorageTransfer
-     * @param \Generated\Shared\Transfer\GlueResourceTransfer $serviceTypesGlueResourceTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResourceTransfer
-     */
     protected function mapServiceTypeStorageTransferToGlueResourceTransfer(
         ServiceTypeStorageTransfer $serviceTypeStorageTransfer,
         GlueResourceTransfer $serviceTypesGlueResourceTransfer
@@ -59,12 +47,6 @@ class ServiceTypeMapper implements ServiceTypeMapperInterface
             ->setAttributes($restServiceTypesAttributesTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageTransfer $serviceTypeStorageTransfer
-     * @param \Generated\Shared\Transfer\RestServiceTypesAttributesTransfer $restServiceTypesAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestServiceTypesAttributesTransfer
-     */
     protected function mapServiceTypeStorageTransferToRestServiceTypesAttributesTransfer(
         ServiceTypeStorageTransfer $serviceTypeStorageTransfer,
         RestServiceTypesAttributesTransfer $restServiceTypesAttributesTransfer

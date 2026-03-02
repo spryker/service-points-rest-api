@@ -30,9 +30,6 @@ class ServicePointsRestApiResourceTester extends Actor
 {
     use _generated\ServicePointsRestApiResourceTesterActions;
 
-    /**
-     * @return \Spryker\Glue\ServicePointsRestApi\ServicePointsRestApiResourceInterface
-     */
     public function getResource(): ServicePointsRestApiResourceInterface
     {
         return $this->getLocator()->servicePointsRestApi()->resource();

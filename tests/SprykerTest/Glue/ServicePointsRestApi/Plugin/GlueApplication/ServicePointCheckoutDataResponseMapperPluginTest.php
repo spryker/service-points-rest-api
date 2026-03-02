@@ -47,9 +47,6 @@ class ServicePointCheckoutDataResponseMapperPluginTest extends Unit
      */
     protected ServicePointsRestApiTester $tester;
 
-    /**
-     * @return void
-     */
     public function testReturnsRestCheckoutDataResponseAttributesTransferWithAllSelectedServicePoints(): void
     {
         // Arrange
@@ -82,9 +79,6 @@ class ServicePointCheckoutDataResponseMapperPluginTest extends Unit
         ));
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsRestCheckoutDataResponseAttributesTransferWithSelectedServicePointsOnly(): void
     {
         // Arrange
@@ -115,9 +109,6 @@ class ServicePointCheckoutDataResponseMapperPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsRestCheckoutDataResponseAttributesTransferWithoutSelectedServicePointsIfQuoteItemsAreNotProvided(): void
     {
         // Act
@@ -132,9 +123,6 @@ class ServicePointCheckoutDataResponseMapperPluginTest extends Unit
         $this->assertEmpty($restCheckoutDataResponseAttributesTransfer->getSelectedServicePoints()->count());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsRestCheckoutDataResponseAttributesTransferWithoutSelectedServicePointsIfNoOneOfQuoteItemsHaveServicePoints(): void
     {
         // Arrange

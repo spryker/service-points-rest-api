@@ -40,9 +40,6 @@ class ServicePointsByCheckoutDataResourceRelationshipPluginTest extends Unit
      */
     protected ServicePointsRestApiTester $tester;
 
-    /**
-     * @return void
-     */
     public function _before(): void
     {
         parent::_before();
@@ -53,9 +50,6 @@ class ServicePointsByCheckoutDataResourceRelationshipPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testAddResourceRelationshipsShouldAddRelationshipsWhenServicePointsAreProvided(): void
     {
         // Arrange
@@ -92,9 +86,6 @@ class ServicePointsByCheckoutDataResourceRelationshipPluginTest extends Unit
         }
     }
 
-    /**
-     * @return void
-     */
     public function testAddResourceRelationshipsShouldNotAddRelationshipsWhenNoServicePointsAreProvided(): void
     {
         // Arrange

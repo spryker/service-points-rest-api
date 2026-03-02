@@ -16,9 +16,6 @@ class ServicePointAddressRelationshipExpander implements ServicePointAddressRela
      */
     protected ServicePointAddressReaderInterface $servicePointAddressReader;
 
-    /**
-     * @param \Spryker\Glue\ServicePointsRestApi\Processor\Reader\ServicePointAddressReaderInterface $servicePointAddressReader
-     */
     public function __construct(ServicePointAddressReaderInterface $servicePointAddressReader)
     {
         $this->servicePointAddressReader = $servicePointAddressReader;

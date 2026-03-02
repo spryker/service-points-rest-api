@@ -26,10 +26,6 @@ class ServiceTypeResourceReader implements ServiceTypeResourceReaderInterface
      */
     protected ServicePointsRestApiToServicePointStorageClientInterface $servicePointStorageClient;
 
-    /**
-     * @param \Spryker\Glue\ServicePointsRestApi\Processor\Mapper\ServiceTypeMapperInterface $serviceTypeMapper
-     * @param \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToServicePointStorageClientInterface $servicePointStorageClient
-     */
     public function __construct(
         ServiceTypeMapperInterface $serviceTypeMapper,
         ServicePointsRestApiToServicePointStorageClientInterface $servicePointStorageClient
@@ -38,11 +34,6 @@ class ServiceTypeResourceReader implements ServiceTypeResourceReaderInterface
         $this->servicePointStorageClient = $servicePointStorageClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeResourceCriteriaTransfer $serviceTypeResourceCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeResourceCollectionTransfer
-     */
     public function getServiceTypeResourceCollection(
         ServiceTypeResourceCriteriaTransfer $serviceTypeResourceCriteriaTransfer
     ): ServiceTypeResourceCollectionTransfer {
@@ -56,11 +47,6 @@ class ServiceTypeResourceReader implements ServiceTypeResourceReaderInterface
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeResourceCriteriaTransfer $serviceTypeResourceCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeStorageCriteriaTransfer
-     */
     protected function createServiceTypeStorageCriteriaTransfer(
         ServiceTypeResourceCriteriaTransfer $serviceTypeResourceCriteriaTransfer
     ): ServiceTypeStorageCriteriaTransfer {

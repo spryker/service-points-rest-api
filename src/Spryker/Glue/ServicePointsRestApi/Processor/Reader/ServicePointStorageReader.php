@@ -26,10 +26,6 @@ class ServicePointStorageReader implements ServicePointStorageReaderInterface
      */
     protected ServicePointsRestApiToStoreClientInterface $storeClient;
 
-    /**
-     * @param \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToServicePointStorageClientInterface $servicePointStorageClient
-     * @param \Spryker\Glue\ServicePointsRestApi\Dependency\Client\ServicePointsRestApiToStoreClientInterface $storeClient
-     */
     public function __construct(
         ServicePointsRestApiToServicePointStorageClientInterface $servicePointStorageClient,
         ServicePointsRestApiToStoreClientInterface $storeClient
@@ -55,11 +51,6 @@ class ServicePointStorageReader implements ServicePointStorageReaderInterface
         return $this->servicePointStorageClient->getServicePointStorageCollection($servicePointStorageCriteriaTransfer);
     }
 
-    /**
-     * @param string $servicePointUuid
-     *
-     * @return \Generated\Shared\Transfer\ServicePointStorageTransfer|null
-     */
     public function findServicePointStorage(string $servicePointUuid): ?ServicePointStorageTransfer
     {
         /** @var \ArrayObject<int, \Generated\Shared\Transfer\ServicePointStorageTransfer> $servicePointStoragesTransfers */

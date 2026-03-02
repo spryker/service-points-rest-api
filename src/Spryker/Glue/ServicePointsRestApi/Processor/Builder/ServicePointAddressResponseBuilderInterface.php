@@ -13,11 +13,6 @@ use Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface;
 
 interface ServicePointAddressResponseBuilderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageTransfer $servicePointStorageTransfer
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createServicePointAddressRestResponse(
         ServicePointStorageTransfer $servicePointStorageTransfer
     ): RestResponseInterface;
@@ -31,17 +26,7 @@ interface ServicePointAddressResponseBuilderInterface
         ServicePointStorageCollectionTransfer $servicePointStorageCollectionTransfer
     ): array;
 
-    /**
-     * @param string $localeName
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createServicePointAddressNotFoundErrorResponse(string $localeName): RestResponseInterface;
 
-    /**
-     * @param string $localeName
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createServicePointAddressServicePointIsNotSpecifiedErrorResponse(string $localeName): RestResponseInterface;
 }

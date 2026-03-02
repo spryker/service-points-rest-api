@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\ServicePointAddressStorageTransfer;
 
 interface ServicePointAddressMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointAddressStorageTransfer $servicePointAddressStorageTransfer
-     * @param \Generated\Shared\Transfer\RestServicePointAddressesAttributesTransfer $restServicePointAddressesAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestServicePointAddressesAttributesTransfer
-     */
     public function mapServicePointAddressStorageTransferToRestServicePointAddressesAttributesTransfer(
         ServicePointAddressStorageTransfer $servicePointAddressStorageTransfer,
         RestServicePointAddressesAttributesTransfer $restServicePointAddressesAttributesTransfer

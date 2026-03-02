@@ -38,11 +38,6 @@ class ServicePointsRestApiBusinessTester extends Actor
 {
     use _generated\ServicePointsRestApiBusinessTesterActions;
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreRelationTransfer
-     */
     public function createStoreRelationTransfer(StoreTransfer $storeTransfer): StoreRelationTransfer
     {
         return (new StoreRelationBuilder([
@@ -84,12 +79,6 @@ class ServicePointsRestApiBusinessTester extends Actor
         return (new QuoteTransfer())->setStore($storeTransfer)->setItems((new ArrayObject($itemTransfers)));
     }
 
-    /**
-     * @param bool $isActive
-     * @param \Generated\Shared\Transfer\StoreTransfer|null $storeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointTransfer
-     */
     public function createServicePoint(bool $isActive, ?StoreTransfer $storeTransfer): ServicePointTransfer
     {
         $servicePointData = [

@@ -20,17 +20,11 @@ use Spryker\Zed\ServicePointsRestApi\ServicePointsRestApiDependencyProvider;
  */
 class ServicePointsRestApiBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ServicePointsRestApi\Business\Expander\CheckoutDataExpanderInterface
-     */
     public function createCheckoutDataExpander(): CheckoutDataExpanderInterface
     {
         return new CheckoutDataExpander();
     }
 
-    /**
-     * @return \Spryker\Zed\ServicePointsRestApi\Business\Mapper\QuoteItemMapperInterface
-     */
     public function createQuoteItemMapper(): QuoteItemMapperInterface
     {
         return new QuoteItemMapper(
@@ -38,9 +32,6 @@ class ServicePointsRestApiBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ServicePointsRestApi\Dependency\Facade\ServicePointsRestApiToServicePointFacadeInterface
-     */
     public function getServicePointFacade(): ServicePointsRestApiToServicePointFacadeInterface
     {
         return $this->getProvidedDependency(ServicePointsRestApiDependencyProvider::FACADE_SERVICE_POINT);

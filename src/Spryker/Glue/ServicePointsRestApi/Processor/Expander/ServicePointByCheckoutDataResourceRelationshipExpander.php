@@ -28,10 +28,6 @@ class ServicePointByCheckoutDataResourceRelationshipExpander implements ServiceP
      */
     protected RestResourceBuilderInterface $restResourceBuilder;
 
-    /**
-     * @param \Spryker\Glue\ServicePointsRestApi\Processor\Mapper\ServicePointMapperInterface $servicePointMapper
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceBuilderInterface $restResourceBuilder
-     */
     public function __construct(
         ServicePointMapperInterface $servicePointMapper,
         RestResourceBuilderInterface $restResourceBuilder
@@ -72,11 +68,6 @@ class ServicePointByCheckoutDataResourceRelationshipExpander implements ServiceP
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointTransfer $servicePointTransfer
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface
-     */
     protected function createServicePointRestResource(ServicePointTransfer $servicePointTransfer): RestResourceInterface
     {
         $restServicePointsAttributesTransfer = $this->servicePointMapper->mapServicePointTransferToRestServicePointsAttributesTransfer(

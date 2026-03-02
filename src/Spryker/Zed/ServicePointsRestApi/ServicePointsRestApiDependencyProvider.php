@@ -21,11 +21,6 @@ class ServicePointsRestApiDependencyProvider extends AbstractBundleDependencyPro
      */
     public const FACADE_SERVICE_POINT = 'FACADE_SERVICE_POINT';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -34,11 +29,6 @@ class ServicePointsRestApiDependencyProvider extends AbstractBundleDependencyPro
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addServicePointFacade(Container $container): Container
     {
         $container->set(static::FACADE_SERVICE_POINT, function (Container $container) {

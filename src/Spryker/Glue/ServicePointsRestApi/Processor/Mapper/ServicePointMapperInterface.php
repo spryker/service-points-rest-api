@@ -14,34 +14,16 @@ use Generated\Shared\Transfer\ServicePointTransfer;
 
 interface ServicePointMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointSearchTransfer $servicePointSearchTransfer
-     * @param \Generated\Shared\Transfer\RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestServicePointsAttributesTransfer
-     */
     public function mapServicePointSearchTransferToRestServicePointsAttributesTransfer(
         ServicePointSearchTransfer $servicePointSearchTransfer,
         RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer
     ): RestServicePointsAttributesTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageTransfer $servicePointStorageTransfer
-     * @param \Generated\Shared\Transfer\RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestServicePointsAttributesTransfer
-     */
     public function mapServicePointStorageTransferToRestServicePointsAttributesTransfer(
         ServicePointStorageTransfer $servicePointStorageTransfer,
         RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer
     ): RestServicePointsAttributesTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointTransfer $servicePointTransfer
-     * @param \Generated\Shared\Transfer\RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestServicePointsAttributesTransfer
-     */
     public function mapServicePointTransferToRestServicePointsAttributesTransfer(
         ServicePointTransfer $servicePointTransfer,
         RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer

@@ -61,9 +61,6 @@ class ServicePointsRestApiFacadeTest extends Unit
      */
     protected ServicePointsRestApiBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -71,9 +68,6 @@ class ServicePointsRestApiFacadeTest extends Unit
         $this->tester->ensureDatabaseTableIsEmpty(SpyServicePointQuery::create());
     }
 
-    /**
-     * @return void
-     */
     public function testExpandCheckoutDataWithAvailableServicePointsExpandsCheckoutDataWithServicePoints(): void
     {
         // Assign
@@ -96,9 +90,6 @@ class ServicePointsRestApiFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testExpandCheckoutDataWithAvailableServicePointsExpandsCheckoutDataWithPresentServicePoints(): void
     {
         // Assign
@@ -121,9 +112,6 @@ class ServicePointsRestApiFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testExpandCheckoutDataWithAvailableServicePointsDoesntExpandCheckoutDataTransferIfQuoteItemsAreNotProvided(): void
     {
         // Act

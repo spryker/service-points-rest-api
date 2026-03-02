@@ -12,10 +12,5 @@ use Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface;
 
 interface ServicePointSearchRequestBuilderInterface
 {
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     *
-     * @return \Generated\Shared\Transfer\ServicePointSearchRequestTransfer
-     */
     public function createServicePointSearchRequestTransfer(RestRequestInterface $restRequest): ServicePointSearchRequestTransfer;
 }

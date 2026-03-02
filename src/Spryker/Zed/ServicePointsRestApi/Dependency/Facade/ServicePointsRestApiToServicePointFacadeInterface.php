@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ServicePointCriteriaTransfer;
 
 interface ServicePointsRestApiToServicePointFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointCriteriaTransfer $servicePointCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointCollectionTransfer
-     */
     public function getServicePointCollection(
         ServicePointCriteriaTransfer $servicePointCriteriaTransfer
     ): ServicePointCollectionTransfer;

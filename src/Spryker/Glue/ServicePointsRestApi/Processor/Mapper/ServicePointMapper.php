@@ -14,12 +14,6 @@ use Generated\Shared\Transfer\ServicePointTransfer;
 
 class ServicePointMapper implements ServicePointMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointSearchTransfer $servicePointSearchTransfer
-     * @param \Generated\Shared\Transfer\RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestServicePointsAttributesTransfer
-     */
     public function mapServicePointSearchTransferToRestServicePointsAttributesTransfer(
         ServicePointSearchTransfer $servicePointSearchTransfer,
         RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer
@@ -27,12 +21,6 @@ class ServicePointMapper implements ServicePointMapperInterface
         return $restServicePointsAttributesTransfer->fromArray($servicePointSearchTransfer->toArray(), true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageTransfer $servicePointStorageTransfer
-     * @param \Generated\Shared\Transfer\RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestServicePointsAttributesTransfer
-     */
     public function mapServicePointStorageTransferToRestServicePointsAttributesTransfer(
         ServicePointStorageTransfer $servicePointStorageTransfer,
         RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer
@@ -40,12 +28,6 @@ class ServicePointMapper implements ServicePointMapperInterface
         return $restServicePointsAttributesTransfer->fromArray($servicePointStorageTransfer->toArray(), true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointTransfer $servicePointTransfer
-     * @param \Generated\Shared\Transfer\RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestServicePointsAttributesTransfer
-     */
     public function mapServicePointTransferToRestServicePointsAttributesTransfer(
         ServicePointTransfer $servicePointTransfer,
         RestServicePointsAttributesTransfer $restServicePointsAttributesTransfer

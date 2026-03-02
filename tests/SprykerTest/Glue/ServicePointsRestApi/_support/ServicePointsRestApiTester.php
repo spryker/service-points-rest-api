@@ -109,9 +109,6 @@ class ServicePointsRestApiTester extends Actor
         );
     }
 
-    /**
-     * @return void
-     */
     public function mockStoreClient(): void
     {
         $storeClientMock = Stub::makeEmpty(
@@ -124,13 +121,6 @@ class ServicePointsRestApiTester extends Actor
         $this->setDependency(ServicePointsRestApiDependencyProvider::CLIENT_STORE, $storeClientMock);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\RestErrorMessageTransfer $restErrorMessageTransfer
-     * @param string $responseCode
-     * @param string $responseDetail
-     *
-     * @return void
-     */
     public function assertRestErrorMessageTransfer(
         RestErrorMessageTransfer $restErrorMessageTransfer,
         string $responseCode,
@@ -151,9 +141,6 @@ class ServicePointsRestApiTester extends Actor
         return (new ServicePointBuilder($seed))->build();
     }
 
-    /**
-     * @return \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface
-     */
     public function createRestRequestMock(): RestRequestInterface
     {
         return Stub::makeEmpty(RestRequestInterface::class);
