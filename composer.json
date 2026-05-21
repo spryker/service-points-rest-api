@@ -18,11 +18,15 @@
         "spryker/transfer": "^3.42.0"
     },
     "require-dev": {
+        "spryker/api-platform": "*",
         "spryker/code-sniffer": "*",
         "spryker/container": "*",
         "spryker/propel": "*",
         "spryker/quote": "*",
         "spryker/testify": "*"
+    },
+    "suggest": {
+        "spryker/api-platform": "If you want to expose ServicePointsRestApi resources through the API Platform stack."
     },
     "autoload": {
         "psr-4": {

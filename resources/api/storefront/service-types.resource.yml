@@ -1,0 +1,43 @@
+resource:
+    name: ServiceTypes
+    shortName: service-types
+    description: Service types API for Storefront operations
+
+    provider: Spryker\Glue\ServicePointsRestApi\Api\Storefront\Provider\ServiceTypesStorefrontProvider
+
+    paginationEnabled: false
+
+    operations:
+        - type: Get
+          openapiContext:
+              responses:
+                  200:
+                      description: 'Service type returned.'
+                  404:
+                      description: 'Service type not found.'
+
+    properties:
+        uuid:
+            type: string
+            identifier: true
+            readable: false
+            writable: false
+            description: 'Service type UUID.'
+            openapiContext:
+                example: '0e6d2c2e-6b3c-5e9f-9b2c-9b2c9b2c9b2c'
+
+        name:
+            type: string
+            readable: true
+            writable: false
+            description: 'Service type name.'
+            openapiContext:
+                example: 'Installation'
+
+        key:
+            type: string
+            readable: true
+            writable: false
+            description: 'Service type key.'
+            openapiContext:
+                example: 'installation'
