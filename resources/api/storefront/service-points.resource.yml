@@ -3,10 +3,6 @@ resource:
     shortName: service-points
     description: 'Service points exposed as a relationship target for `checkout-data`. Populated through `Spryker\Glue\CheckoutRestApi\Api\Storefront\Relationship\CheckoutDataServicePointsRelationshipResolver`; the legacy `ServicePointsResourceRoutePlugin` keeps serving `GET /service-points` directly.'
 
-    includableIn:
-        - resource: CheckoutData
-          relationshipName: service-points
-
     properties:
         uuid:
             type: string
