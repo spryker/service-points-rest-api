@@ -1,7 +1,33 @@
 resource:
     name: ServicePoints
     shortName: service-points
-    description: 'Service points exposed as a relationship target for `checkout-data`. Populated through `Spryker\Glue\CheckoutRestApi\Api\Storefront\Relationship\CheckoutDataServicePointsRelationshipResolver`; the legacy `ServicePointsResourceRoutePlugin` keeps serving `GET /service-points` directly.'
+    description: Service points API for Storefront operations
+
+    provider: Spryker\Glue\ServicePointsRestApi\Api\Storefront\Provider\ServicePointsStorefrontProvider
+
+    operations:
+        - type: Get
+          openapiContext:
+              responses:
+                  200:
+                      description: 'Service point returned.'
+                  404:
+                      description: 'Service point not found.'
+
+        - type: GetCollection
+          paginationItemsPerPage: 10
+          openapiContext:
+              responses:
+                  200:
+                      description: 'Service point collection returned.'
+
+    includes:
+        - relationshipName: service-point-addresses
+          targetResource: ServicePointAddresses
+          uriTemplate: '/service-points/{servicePointUuid}/service-point-addresses/{uuid}'
+          uriVariableMappings:
+              uuid: servicePointUuid
+              servicePointAddressUuid: uuid
 
     properties:
         uuid:
@@ -28,3 +54,17 @@ resource:
             description: 'Service point key.'
             openapiContext:
                 example: 'main-service-point'
+
+        servicePointAddressUuid:
+            type: string
+            readable: false
+            writable: false
+            description: 'Internal mapping for the service-point-addresses relationship.'
+            openapiContext:
+                example: '8a14ba51-3fd1-5b35-9b75-f7d1bf09c0c8'
+
+        pagination:
+            type: array
+            readable: true
+            writable: false
+            description: 'Pagination metadata for the collection. Populated only on the first item of a GET /service-points response and consumed by PaginationLinksResponseSubscriber to emit JSON:API top-level pagination links.'

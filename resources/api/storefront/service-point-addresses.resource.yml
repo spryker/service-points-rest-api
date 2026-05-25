@@ -1,0 +1,100 @@
+resource:
+    name: ServicePointAddresses
+    shortName: service-point-addresses
+    description: Service point addresses API for Storefront operations
+
+    provider: Spryker\Glue\ServicePointsRestApi\Api\Storefront\Provider\ServicePointAddressesStorefrontProvider
+
+    paginationEnabled: false
+
+    operations:
+        - type: Get
+          uriTemplate: '/service-points/{servicePointUuid}/service-point-addresses/{uuid}'
+          uriVariables:
+              servicePointUuid:
+                  identifiers: [servicePointUuid]
+              uuid:
+                  identifiers: [uuid]
+          openapiContext:
+              responses:
+                  200:
+                      description: 'Service point address returned.'
+                  404:
+                      description: 'Service point address not found.'
+
+        # Validation route so `GET /service-points/{uuid}/service-point-addresses` (no id) hits provideCollection() which throws legacy 5403.
+        - type: GetCollection
+          uriTemplate: '/service-points/{servicePointUuid}/service-point-addresses'
+          uriVariables:
+              servicePointUuid:
+                  identifiers: [servicePointUuid]
+          openapiContext:
+              responses:
+                  404:
+                      description: 'The endpoint is not found.'
+
+    properties:
+        servicePointUuid:
+            type: string
+            readable: true
+            writable: false
+            description: 'Parent service point UUID.'
+            openapiContext:
+                example: '3fec586e-92f6-5692-a98b-dfca29cd2e16'
+
+        uuid:
+            type: string
+            identifier: true
+            readable: true
+            writable: false
+            description: 'Service point address UUID.'
+            openapiContext:
+                example: '8a14ba51-3fd1-5b35-9b75-f7d1bf09c0c8'
+
+        countryIso2Code:
+            type: string
+            readable: true
+            writable: false
+            description: 'Two-letter ISO code for the country.'
+            openapiContext:
+                example: 'DE'
+
+        address1:
+            type: string
+            readable: true
+            writable: false
+            description: 'First line of the street address.'
+            openapiContext:
+                example: 'Kieler Str. 75'
+
+        address2:
+            type: string
+            readable: true
+            writable: false
+            description: 'Second line of the street address.'
+            openapiContext:
+                example: 'Building A'
+
+        address3:
+            type: string
+            readable: true
+            writable: false
+            description: 'Third line of the street address.'
+            openapiContext:
+                example: 'Floor 3'
+
+        zipCode:
+            type: string
+            readable: true
+            writable: false
+            description: 'Postal code of the address.'
+            openapiContext:
+                example: '20095'
+
+        city:
+            type: string
+            readable: true
+            writable: false
+            description: 'City of the address.'
+            openapiContext:
+                example: 'Hamburg'
