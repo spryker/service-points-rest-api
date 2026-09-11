@@ -17,6 +17,29 @@ resource:
         - type: GetCollection
           paginationItemsPerPage: 10
           openapiContext:
+              parameters:
+                  - name: 'q'
+                    in: query
+                    required: false
+                    description: 'Full-text search over service point names and addresses.'
+                    schema:
+                        type: string
+                    example: 'Berlin'
+                  - name: 'filter[service-points.serviceTypeKey]'
+                    in: query
+                    required: false
+                    description: 'Return only service points that offer the service type with this key.'
+                    schema:
+                        type: string
+                    example: 'pickup'
+                  - name: 'sort'
+                    in: query
+                    required: false
+                    description: 'Sort field, prefixed with `-` for descending order. Unsupported fields are ignored.'
+                    schema:
+                        type: string
+                        enum: ['city', '-city']
+                    example: 'city'
               responses:
                   200:
                       description: 'Service point collection returned.'
