@@ -7,6 +7,9 @@ resource:
 
     operations:
         - type: Get
+          extraProperties:
+              notFoundCode: '5401'
+              notFoundMessage: 'Service point entity was not found.'
           openapiContext:
               responses:
                   200:

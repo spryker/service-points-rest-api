@@ -15,6 +15,9 @@ resource:
                   identifiers: [servicePointUuid]
               uuid:
                   identifiers: [uuid]
+          extraProperties:
+              notFoundCode: '5402'
+              notFoundMessage: 'Service point address entity was not found.'
           openapiContext:
               responses:
                   200:
@@ -28,6 +31,9 @@ resource:
           uriVariables:
               servicePointUuid:
                   identifiers: [servicePointUuid]
+          extraProperties:
+              notFoundCode: '5403'
+              notFoundMessage: 'The endpoint is not found.'
           openapiContext:
               responses:
                   404:
