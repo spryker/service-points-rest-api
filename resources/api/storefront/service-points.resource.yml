@@ -93,4 +93,5 @@ resource:
             type: array
             readable: true
             writable: false
+            collectionOnly: true
             description: 'Pagination metadata for the collection. Populated only on the first item of a GET /service-points response and consumed by PaginationLinksResponseSubscriber to emit JSON:API top-level pagination links.'
