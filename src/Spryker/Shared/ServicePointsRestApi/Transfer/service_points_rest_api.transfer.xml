@@ -41,6 +41,8 @@
     <transfer name="ServicePointStorage" strict="true">
         <property name="address" type="ServicePointAddressStorage" description="A physical address."/>
         <property name="uuid" type="string" description="A Universally Unique Identifier for an entity."/>
+        <property name="name" type="string"/>
+        <property name="key" type="string"/>
     </transfer>
 
     <transfer name="ServicePointSearchCollection" strict="true">
@@ -70,10 +72,17 @@
     <transfer name="ServicePointAddressStorage" strict="true">
         <property name="uuid" type="string" description="A Universally Unique Identifier for an entity."/>
         <property name="country" type="CountryStorage" description="The country associated with an address or entity."/>
+        <property name="address1" type="string" description="The first line of a street address."/>
+        <property name="address2" type="string" description="The second line of a street address."/>
+        <property name="address3" type="string" description="The third line of a street address."/>
+        <property name="zipCode" type="string" description="The postal code for an address."/>
+        <property name="city" type="string" description="The city part of an address."/>
     </transfer>
 
     <transfer name="ServicePointSearch" strict="true">
         <property name="uuid" type="string" description="A Universally Unique Identifier for an entity."/>
+        <property name="name" type="string"/>
+        <property name="key" type="string"/>
     </transfer>
 
     <transfer name="CountryStorage" strict="true">
@@ -152,6 +161,12 @@
 
     <transfer name="ServiceTypeStorage" strict="true">
         <property name="uuid" type="string" description="A Universally Unique Identifier for an entity."/>
+        <property name="name" type="string"/>
+        <property name="key" type="string"/>
+    </transfer>
+
+    <transfer name="Locale">
+        <property name="localeName" type="string"/>
     </transfer>
 
 </transfers>
